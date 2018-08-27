@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/kenshin579/hackernews-node.git",
   "author": "ykoh <kenshin579@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.14.12"
+  }
 }
