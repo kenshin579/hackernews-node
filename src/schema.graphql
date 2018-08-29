@@ -4,21 +4,35 @@ type Query {
     info: String!
     feed: [Link!]!
     # Fetch a single link by its `id`
-#    link(id: ID!): Link
+    #    link(id: ID!): Link
 }
 
 type Mutation {
     post(url: String!, description: String!): Link!
+    signup(email: String!, password: String!, name: String!): AuthPayload
+    login(email: String!, password: String!): AuthPayload
 
-#    # Update a link
-#    updateLink(id: ID!, url: String, description: String): Link
-#
-#    # Delete a link
-#    deleteLink(id: ID!): Link
+    #    # Update a link
+    #    updateLink(id: ID!, url: String, description: String): Link
+    #
+    #    # Delete a link
+    #    deleteLink(id: ID!): Link
 }
 
 type Link {
     id: ID!
     description: String!
     url: String!
+}
+
+type AuthPayload {
+    token: String
+    user: User
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    links: [Link!]!
 }

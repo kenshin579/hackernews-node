@@ -34,3 +34,5 @@ build/Release
 
 # Output of 'npm pack'
 *.tgz
+
+src/generated
